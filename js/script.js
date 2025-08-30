@@ -20,14 +20,14 @@ let books = [
         ]
     },
     {
-        "name": "Schatten von Night City",
+        "name": "Tales of Night City",
         "author": "V",
         "likes": 2450,
         "liked": true,
         "price": 21.99,
         "publishedYear": 2020,
         "genre": "Science-Fiction",
-        "cover": "./img/ChatGPT Image Aug 28, 2025, 12_56_23 PM.png",
+        "cover": "./img/tales.png",
         "comments": [
             {
                 "name": "StreetKid77",
@@ -51,7 +51,7 @@ let books = [
         "price": 23.50,
         "publishedYear": 2021,
         "genre": "Science-Fiction",
-        "cover": "./img/ChatGPT Image Aug 28, 2025, 12_56_23 PM.png",
+        "cover": "./img/rebellion.png",
         "comments": [
             {
                 "name": "RockFan2045",
@@ -71,7 +71,7 @@ let books = [
         "price": 19.75,
         "publishedYear": 2022,
         "genre": "Science-Fiction",
-        "cover": "./img/ChatGPT Image Aug 28, 2025, 12_56_23 PM.png",
+        "cover": "./img/im-netz.png",
         "comments": [
             {
                 "name": "BraindanceLover",
@@ -91,7 +91,7 @@ let books = [
         "price": 20.30,
         "publishedYear": 2020,
         "genre": "Science-Fiction",
-        "cover": "./img/ChatGPT Image Aug 28, 2025, 12_56_23 PM.png",
+        "cover": "./img/staub.png",
         "comments": [
             {
                 "name": "NomadLife",
@@ -182,8 +182,6 @@ let books = [
 ]
 
 
-// ...existing code...
-
 function renderBooks(books) {
     const container = document.getElementById('books-container');
     container.innerHTML = '';
@@ -204,9 +202,7 @@ function renderBooks(books) {
       <div class="book-image"><img src="${book.cover}" alt="${book.name} Cover"></div>
       <div class="book-info">
         <span class="price">${book.price.toFixed(2).replace('.', ',')} €</span>
-
-     <span class="likes">${book.likes} <span class="heart" onclick="toggleLike(${i})">${book.liked ? '❤️' : '🤍'}</span></span>
-
+        <span class="likes">${book.likes} <span class="heart" onclick="toggleLike(${i})">${book.liked ? '❤️' : '🤍'}</span></span>
         <div><b>Author</b>: ${book.author}</div>
         <div><b>Erscheinungsjahr</b>: ${book.publishedYear}</div>
         <div><b>Genre</b>: ${book.genre}</div>
