@@ -2,9 +2,19 @@
          background-image: url("../img/background.png");
          background-repeat: no-repeat;
          background-size: cover;
+         user-select: none;
+         cursor: default;
        }
 
-       .book-container {
+       h1 {
+         color: #FFFFFF;
+         text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+         color: #FFFFFF;
+         padding-top: 40px;
+         padding-left: 110px;
+       }
+
+       .main-book {
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
@@ -70,6 +80,8 @@
          border: none;
          padding: 6px;
          margin-top: 10px;
+         user-select: text;
+         cursor: text;
        }
 
        .send-btn {
