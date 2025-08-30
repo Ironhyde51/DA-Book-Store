@@ -29,7 +29,14 @@
          width: 350px;
          box-shadow: 0 4px 16px #0008;
          font-family: 'Segoe UI', sans-serif;
+         transition: transform 0.2s ease, box-shadow 0.2s ease;
        }
+
+       .book-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 8px 32px #000a;
+       }
+
 
        .book-image {
          width: 120px;
