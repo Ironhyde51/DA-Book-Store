@@ -1,21 +1,59 @@
        body {
-         background-image: url("../img/background.png");
-         background-repeat: no-repeat;
-         background-size: cover;
-         user-select: none;
-         cursor: default;
+           background-image: url("../img/background.png");
+           background-repeat: no-repeat;
+           background-size: cover;
+           user-select: none;
+           cursor: default;
        }
 
        h1 {
-         color: #FFFFFF;
-         text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
-         color: #FFFFFF;
-         padding-top: 40px;
-         padding-left: 110px;
+           color: #FFFFFF;
+           text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+           color: #FFFFFF;
+           font-size: 55px;
+           padding-top: 40px;
+           padding-left: 110px;
+       }
+
+       .headline-icon {
+           height: 55px;
+           vertical-align: middle;
+           margin-right: 20px;
+           filter:
+            brightness(0) invert(1)
+            drop-shadow(0 0 5px #FFF)
+            drop-shadow(0 0 10px #FFF) 
+            drop-shadow(0 0 15px #FFF) 
+            drop-shadow(0 0 20px #FF2D95) 
+            drop-shadow(0 0 30px #FF2D95) 
+            drop-shadow(0 0 40px #FF2D95) 
+            drop-shadow(0 0 50px #FF2D95) 
+            drop-shadow(0 0 75px #FF2D95);
        }
 
        .main-book {
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+       }
+
+       .comments::-webkit-scrollbar {
+           width: 8px;
+           background: #333333;
+       }
+
+       .comments::-webkit-scrollbar-thumb {
+           background: #FF2D95;
+           border-radius: 8px;
+           box-shadow: 0 0 10px #FF2D95, 0 0 20px #FF2D95;
+       }
+
+       .comments::-webkit-scrollbar-thumb:hover {
+           background: #fff;
+       }
+
+
+       .comments {
+           scrollbar-width: thin;
+           scrollbar-color: #FF2D95 #333333;
        }

@@ -197,7 +197,6 @@ function renderBooks(books) {
         }
 
         card.innerHTML = `
-    
       <h2>${book.name}</h2>
       <div class="book-image"><img src="${book.cover}" alt="${book.name} Cover"></div>
       <div class="book-info">
@@ -217,38 +216,33 @@ function renderBooks(books) {
 
         container.appendChild(card);
 
-
-
         const sendbtn = card.querySelector('.send-btn');
         const input = card.querySelector('.comment-input');
-
-
 
         sendbtn.onclick = function () {
             const newComment = input.value.trim();
             if (newComment !== '') {
                 book.comments.push({
-                    name: "SandevistanRenato",
+                    name: "SandevistanUSER",
                     comment: input.value
                 });
                 renderBooks(books);
-
-                function toggleLike(index) {
-                    let book = books[index];
-                    if (book.liked) {
-                        book.liked = false;
-                        book.likes--;
-                    } else {
-                        book.liked = true;
-                        book.likes++;
-                    }
-                    renderBooks(books);
-                }
             }
         };
     }
 }
 
+function toggleLike(index) {
+    let book = books[index];
+    if (book.liked) {
+        book.liked = false;
+        book.likes--;
+    } else {
+        book.liked = true;
+        book.likes++;
+    }
+    renderBooks(books);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     renderBooks(books);
